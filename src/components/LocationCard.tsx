@@ -16,16 +16,18 @@ export function LocationCard({ location, propertyCount }: LocationCardProps) {
       className="location-card"
       variants={cardVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.22 }}
       transition={{ duration: reduceMotion ? 0 : 0.26 }}
-      whileHover={reduceMotion ? undefined : { y: -3 }}
+      whileHover={reduceMotion ? undefined : { y: -4 }}
+      whileTap={reduceMotion ? undefined : { y: -1, scale: 0.99 }}
     >
       <Link to={`/locations/${location.slug}`} className="property-card__media" aria-label={location.name}>
         <img src={location.image} alt={`${location.name} skyline and neighbourhood context`} loading="lazy" />
       </Link>
       <div className="location-card__body">
         <div className="chips">
-          <span className="pill brand">{propertyCount} sample properties</span>
+          <span className="pill brand">{propertyCount} properties</span>
           <span className="pill">{location.state}</span>
         </div>
         <h3 className="property-card__title">{location.name}</h3>

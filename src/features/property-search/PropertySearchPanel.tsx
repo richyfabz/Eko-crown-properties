@@ -159,9 +159,7 @@ export function PropertySearchPanel({ properties, value, onChange, onReset }: Pr
       </div>
 
       <div className="form-actions">
-        <div className="fine-print">
-          Search state is synced to the URL so users can copy and return to the same filtered list.
-        </div>
+        <div className="fine-print">Use the filters to refine your shortlist by area, price, and property type.</div>
         <div className="button-row">
           <Button type="button" variant="secondary" onClick={onReset}>
             Reset filters

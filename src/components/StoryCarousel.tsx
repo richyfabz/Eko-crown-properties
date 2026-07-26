@@ -43,9 +43,9 @@ export function StoryCarousel({ eyebrow, title, description, backgroundImage, sl
                 <h2 className="section-title">{title}</h2>
                 <p className="lede">{description}</p>
                 <div className="button-row">
-                  <ButtonLink href="/contact">Chat on WhatsApp</ButtonLink>
+                  <ButtonLink href="/book-inspection">Book Inspection</ButtonLink>
                   <ButtonLink href="/properties" variant="secondary">
-                    Browse homes
+                    Browse Properties
                   </ButtonLink>
                 </div>
               </div>

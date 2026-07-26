@@ -9,10 +9,12 @@ import { Drawer } from './Drawer';
 export function Layout({ children }: { children: ReactNode }) {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [whatsappOpen, setWhatsappOpen] = useState(false);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setWhatsappOpen(false);
   }, [location.pathname]);
 
   return (
@@ -100,22 +102,64 @@ export function Layout({ children }: { children: ReactNode }) {
             </div>
           </div>
           <div className="footer-bottom">
-            <span>© 2026 {brand.name}. Sample content for release-ready front-end build.</span>
+            <span>© 2026 {brand.name}. Premium browsing, booking, and enquiry experience.</span>
             <span>Built with React, TypeScript, Vite, and Framer Motion.</span>
           </div>
         </Container>
       </footer>
 
-      <a
-        className="whatsapp-fab"
-        href={`https://wa.me/${brand.whatsapp.replace(/\D/g, '')}`}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Chat with customer care on WhatsApp"
-      >
-        <span className="whatsapp-fab__label">WhatsApp</span>
-        <strong>Chat with customer care</strong>
-      </a>
+      <div className="whatsapp-widget">
+        <AnimatePresence initial={false}>
+          {whatsappOpen ? (
+            <motion.div
+              key="whatsapp-panel"
+              id="whatsapp-panel"
+              className="whatsapp-widget__panel surface-panel"
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 12, scale: reduceMotion ? 1 : 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: reduceMotion ? 0 : 8, scale: reduceMotion ? 1 : 0.98 }}
+              transition={{ duration: reduceMotion ? 0 : 0.2 }}
+            >
+              <div className="whatsapp-widget__header">
+                <p className="eyebrow">WhatsApp</p>
+                <Button variant="ghost" type="button" onClick={() => setWhatsappOpen(false)}>
+                  Close
+                </Button>
+              </div>
+              <p className="muted">Chat with customer care about homes, inspections, or listing questions.</p>
+              <div className="button-row">
+                <a
+                  className="button button-primary"
+                  href={`https://wa.me/${brand.whatsapp.replace(/\D/g, '')}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Chat now
+                </a>
+                <ButtonLink href="/contact" variant="secondary">
+                  Contact us
+                </ButtonLink>
+              </div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+        <Button
+          type="button"
+          variant="primary"
+          className="whatsapp-widget__toggle"
+          aria-expanded={whatsappOpen}
+          aria-controls="whatsapp-panel"
+          onClick={() => setWhatsappOpen((current) => !current)}
+        >
+          <span className="whatsapp-widget__toggle-icon" aria-hidden="true">
+            WA
+          </span>
+          <span className="whatsapp-widget__toggle-copy">
+            <strong>WhatsApp</strong>
+            <span>Quick help</span>
+          </span>
+        </Button>
+      </div>
 
       <Drawer open={mobileMenuOpen} title="Navigation" onClose={() => setMobileMenuOpen(false)}>
         <div className="drawer-links">

@@ -15,8 +15,10 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
       className="testimonial-card"
       variants={cardVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.28 }}
       transition={{ duration: reduceMotion ? 0 : 0.26 }}
+      whileHover={reduceMotion ? undefined : { y: -3 }}
     >
       <div className="testimonial-card__meta">
         {testimonial.image ? (

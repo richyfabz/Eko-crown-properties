@@ -30,9 +30,11 @@ export function PropertyCard({
       className="property-card"
       variants={cardVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.22 }}
       transition={{ duration: reduceMotion ? 0 : 0.28 }}
-      whileHover={reduceMotion ? undefined : { y: -3 }}
+      whileHover={reduceMotion ? undefined : { y: -4 }}
+      whileTap={reduceMotion ? undefined : { y: -1, scale: 0.99 }}
     >
       <Link to={`/properties/${property.slug}`} className="property-card__media" aria-label={property.title}>
         <img src={property.images[0]?.src} alt={property.images[0]?.alt ?? property.title} loading="lazy" />
@@ -40,7 +42,7 @@ export function PropertyCard({
       <div className="property-card__body">
         <div className="chips">
           <Badge tone={property.verificationStatus === 'verified' ? 'success' : property.verificationStatus === 'reviewed' ? 'warning' : 'default'}>
-            {property.verificationStatus === 'sample' ? 'Sample content' : property.verificationStatus === 'verified' ? 'Verified listing' : 'Reviewed listing'}
+            {property.verificationStatus === 'sample' ? 'Listing preview' : property.verificationStatus === 'verified' ? 'Verified listing' : 'Reviewed listing'}
           </Badge>
           {property.featured ? <Badge tone="brand">Featured</Badge> : null}
           {property.luxury ? <Badge tone="brand">Luxury</Badge> : null}

@@ -101,20 +101,20 @@ function HomePage() {
                 Trusted homes for buyers, renters, and sellers who want clarity before commitment.
               </h1>
               <p>
-                Explore verified sample listings, calm property storytelling, and direct contact paths that help users move
-                from discovery to inspection without confusion. The interface is designed for Nigerian buyers, diaspora
-                clients, and property owners who want a professional experience from the first click.
+                Explore curated homes, calm property storytelling, and direct contact paths that help users move from
+                discovery to inspection without confusion. The experience is designed for Nigerian buyers, diaspora
+                clients, landlords, and property owners who want a refined first impression.
               </p>
               <div className="button-row">
-                <ButtonLink href="/properties">Browse properties</ButtonLink>
+                <ButtonLink href="/properties">Browse Properties</ButtonLink>
                 <ButtonLink href="/book-inspection" variant="secondary">
-                  Book inspection
+                  Book Inspection
                 </ButtonLink>
               </div>
               <div className="chips">
-                <Badge tone="brand">Verified sample listings</Badge>
-                <Badge tone="success">Mobile-first discovery</Badge>
-                <Badge tone="warning">Honest front-end forms</Badge>
+                <Badge tone="brand">Curated homes</Badge>
+                <Badge tone="success">Local insight</Badge>
+                <Badge tone="warning">Direct support</Badge>
               </div>
             </motion.div>
 
@@ -128,16 +128,16 @@ function HomePage() {
                 <img src="/images/hero-duplex.jfif" alt="Modern duplex with a landscaped front approach and private carport" />
               </div>
               <div className="hero-panel">
-                <div className="callout">
-                  <h3>Start with a guided search</h3>
-                  <p className="muted">
-                    Filter by purpose, location, price, bedrooms, and trust level. Search state is reflected in the URL for
-                    easy sharing and return visits.
+              <div className="callout">
+                <h3>Start with a guided search</h3>
+                <p className="muted">
+                    Filter by purpose, location, price, bedrooms, and property type. Keep the same shortlist handy whenever
+                    you return.
                   </p>
                   <div className="button-row">
-                    <ButtonLink href="/properties">Open search</ButtonLink>
+                    <ButtonLink href="/properties">Browse Properties</ButtonLink>
                     <ButtonLink href="/locations" variant="secondary">
-                      Explore locations
+                      Explore Locations
                     </ButtonLink>
                   </div>
                 </div>
@@ -161,8 +161,8 @@ function HomePage() {
           <SectionHeading
             eyebrow="Quick search"
             title="Start in the right place."
-            description="The first decision is usually purpose. Use this entry point to move straight into the right listings."
-            action={<ButtonLink href="/properties" variant="secondary">Open catalogue</ButtonLink>}
+            description="The first decision is usually purpose. Choose buy or rent, then move straight into the right listings."
+            action={<ButtonLink href="/properties" variant="secondary">Browse Properties</ButtonLink>}
           />
           <div className="panel stack">
             <div className="section-grid two">
@@ -188,8 +188,8 @@ function HomePage() {
           <SectionHeading
             eyebrow="Featured listings"
             title="Premium homes that tell a clear story."
-            description="Sample listings are arranged with strong photography, visible verification, and a straightforward route to contact."
-            action={<ButtonLink href="/properties" variant="secondary">See all listings</ButtonLink>}
+            description="The featured homes use strong photography, clear details, and a straightforward route to contact."
+            action={<ButtonLink href="/properties" variant="secondary">Browse Properties</ButtonLink>}
           />
           <div className="property-grid">
             {featured.map((property) => (
@@ -253,10 +253,10 @@ function HomePage() {
         <Container wide>
           <div className="split-layout">
             <div className="stack">
-              <SectionHeading eyebrow="Why choose us" title="Trust first. Conversion second." />
+              <SectionHeading eyebrow="Why choose us" title="Trust first. Clarity throughout." />
               <p className="lede">
-                The experience keeps the emphasis on verified sample inventory, professional presentation, and low-friction
-                contact paths. Every page is designed to reduce uncertainty before asking users to act.
+                The experience keeps the emphasis on clear details, professional presentation, and low-friction contact
+                paths. Every page is designed to reduce uncertainty before asking users to act.
               </p>
               <div className="section-grid two">
                 {services.map((service) => (
@@ -280,8 +280,8 @@ function HomePage() {
               </ol>
               <div className="map-placeholder">
                 <div>
-                  <strong>Roadmap-ready product flow</strong>
-                  <p className="fine-print">Prepared for backend, CRM, map, and analytics integration later.</p>
+                  <strong>Clear next steps</strong>
+                  <p className="fine-print">Every enquiry path explains what happens next in plain language.</p>
                 </div>
               </div>
             </div>
@@ -294,7 +294,7 @@ function HomePage() {
           <SectionHeading
             eyebrow="Testimonials"
             title="Trust grows through real stories and honest labels."
-            description="Sample testimonial content is clearly marked and presented with a calm, editorial layout."
+            description="Testimonial content is presented with a calm, editorial layout."
           />
           <div className="testimonial-grid">
             {testimonials.map((testimonial) => (
@@ -306,8 +306,8 @@ function HomePage() {
 
       <StoryCarousel
         eyebrow="Customer care and family stories"
-        title="A scrolling story section with stronger contrast."
-        description="Families, remote buyers, and location context now sit on image-led cards with a sticky scroll background, softer blur, and clearer text."
+        title="Stories that add context."
+        description="Families, remote buyers, and location context sit on image-led cards with a calmer rhythm and stronger contrast."
         backgroundImage="/raw-assets/We%20decided%20to%20rev%20up%20some%20fun%20with%20%40LEGO%20bricks!%20%23ad%20Creating%20a%20racetrack%20and%20cars%20from%20our%20imagination%20to%20race!!%20One%20thing%20about%20us,%20even%20play%20turns%20into%20learning%20and%20time%20well%20spent!%20As%20siblings%20and%20family,%20we%20want.jfif"
         slides={storySlides}
       />
@@ -330,20 +330,20 @@ function HomePage() {
         <Container wide>
           <div className="callout">
             <p className="eyebrow">Final CTA</p>
-            <div className="section-heading-row" style={{ marginBottom: 0 }}>
-              <div>
-                <h2 className="section-title">Ready to browse, book, or list a property?</h2>
-                <p className="lede">
-                  Move into the right next step with a site that remains honest, accessible, and quick on mobile.
-                </p>
+              <div className="section-heading-row" style={{ marginBottom: 0 }}>
+                <div>
+                  <h2 className="section-title">Ready to browse, book, or list a property?</h2>
+                  <p className="lede">
+                    Move into the right next step with a site that remains honest, accessible, and quick on mobile.
+                  </p>
+                </div>
+                <div className="button-row">
+                  <ButtonLink href="/properties">Browse Properties</ButtonLink>
+                  <ButtonLink href="/book-inspection" variant="secondary">
+                    Book Inspection
+                  </ButtonLink>
+                </div>
               </div>
-              <div className="button-row">
-                <ButtonLink href="/properties">Browse properties</ButtonLink>
-                <ButtonLink href="/contact" variant="secondary">
-                  Contact us
-                </ButtonLink>
-              </div>
-            </div>
           </div>
         </Container>
       </section>
@@ -373,9 +373,9 @@ function PropertyDirectoryPage({ purpose, title, description }: { purpose?: Prop
           <h1 className="page-title">{title}</h1>
           <p className="lede">{description}</p>
           <div className="button-row">
-            <ButtonLink href="/book-inspection">Book inspection</ButtonLink>
+            <ButtonLink href="/book-inspection">Book Inspection</ButtonLink>
             <ButtonLink href="/contact" variant="secondary">
-              Contact an agent
+              Contact Agent
             </ButtonLink>
           </div>
         </Container>
@@ -473,7 +473,7 @@ function PropertyDetailPage() {
           <p className="lede">{property.summary}</p>
           <div className="chips">
             <Badge tone={property.verificationStatus === 'verified' ? 'success' : property.verificationStatus === 'reviewed' ? 'warning' : 'default'}>
-              {property.verificationStatus === 'sample' ? 'Sample content' : 'Verified context'}
+              {property.verificationStatus === 'sample' ? 'Listing preview' : 'Verified context'}
             </Badge>
             {property.featured ? <Badge tone="brand">Featured</Badge> : null}
             {property.luxury ? <Badge tone="brand">Luxury</Badge> : null}
@@ -599,12 +599,12 @@ function PropertyDetailPage() {
                     {isCompared ? 'Compared' : 'Compare'}
                   </Button>
                 </div>
-                <ButtonLink href={`/book-inspection?property=${property.slug}`}>Book inspection</ButtonLink>
+                <ButtonLink href={`/book-inspection?property=${property.slug}`}>Book Inspection</ButtonLink>
                 <ButtonLink href={`/contact?property=${property.slug}`} variant="secondary">
-                  Contact agent
+                  Contact Agent
                 </ButtonLink>
                 <div className="notice">
-                  This is a sample listing experience. Replace sample content with live inventory when the backend is connected.
+                  This listing is presented as a polished preview and can be replaced with live inventory when available.
                 </div>
                 {agent ? (
                   <div className="callout">
@@ -765,7 +765,7 @@ function LocationDetailPage() {
                 </div>
               </div>
               <div className="panel stack">
-                <SectionHeading eyebrow="Market summary" title="Sample-only pricing note." />
+                <SectionHeading eyebrow="Market summary" title="Pricing context." />
                 <p className="notice">{location.marketNote}</p>
                 <div className="section-grid two">
                   <div>
@@ -875,22 +875,22 @@ function AboutPage() {
             <div className="panel stack">
               <SectionHeading eyebrow="Our approach" title="What this experience does well." />
               <ul className="list">
-                <li>Clear search, filtering, and URL state</li>
+                <li>Clear search, filtering, and shortlist controls</li>
                 <li>Visible trust indicators without fabricated claims</li>
                 <li>Strong mobile layouts and readable typography</li>
-                <li>Honest form states and explicit sample labeling</li>
+                <li>Honest form states and clear status labels</li>
               </ul>
             </div>
             <div className="panel stack">
               <SectionHeading eyebrow="What comes next" title="Ready for future integrations." />
               <ul className="list">
-                <li>Backend listings</li>
+                <li>Live listings</li>
                 <li>Map provider</li>
                 <li>CRM or email handoff</li>
                 <li>Analytics events</li>
               </ul>
               <div className="notice">
-                The current release intentionally preserves a calm, production-ready front end while the backend is still pending.
+                The current site is designed to feel calm and production-ready while future integrations are prepared.
               </div>
             </div>
           </div>
@@ -902,12 +902,12 @@ function AboutPage() {
 
 function BlogPage() {
   return (
-    <Page title={`Blog | ${brand.name}`} description="Editorial guides and sample articles for the Nigerian property journey." canonicalPath="/blog">
+    <Page title={`Blog | ${brand.name}`} description="Editorial guides for the Nigerian property journey." canonicalPath="/blog">
       <section className="page-hero">
         <Container wide>
           <p className="eyebrow">Blog</p>
           <h1 className="page-title">Editorial guidance for better property decisions.</h1>
-          <p className="lede">This section is intentionally sample-led and ready for later content migration.</p>
+          <p className="lede">This section can grow into a fuller editorial hub as the content library expands.</p>
         </Container>
       </section>
       <section className="section-tight">
@@ -920,7 +920,7 @@ function BlogPage() {
             ].map((title) => (
               <article key={title} className="service-card">
                 <div className="service-card__body">
-                  <Badge tone="brand">Sample article</Badge>
+                  <Badge tone="brand">Editorial article</Badge>
                   <h3>{title}</h3>
                   <p className="muted">Short editorial guidance designed to support the property journey rather than distract from it.</p>
                   <ButtonLink href="/contact" variant="secondary">
@@ -960,7 +960,7 @@ function ContactPage() {
               }}
             >
               <SectionHeading eyebrow="Contact form" title="Tell us what you need." />
-              {submitted ? <div className="alert">Thanks. This front-end release is ready for backend wiring later.</div> : null}
+              {submitted ? <div className="alert">Thanks. Your message has been captured locally for the current release.</div> : null}
               <div className="form-grid">
                 <label className="field">
                   <span>Name</span>
@@ -980,12 +980,12 @@ function ContactPage() {
                 </label>
               </div>
               <div className="notice">
-                This form currently confirms locally and does not send data to a live backend.
+                This form currently confirms locally and can be connected to a live backend later.
               </div>
               <div className="button-row">
                 <Button type="submit">Send enquiry</Button>
                 <ButtonLink href="/book-inspection" variant="secondary">
-                  Book inspection instead
+                  Book Inspection Instead
                 </ButtonLink>
               </div>
             </form>
@@ -1032,7 +1032,7 @@ function BookInspectionPage() {
         <Container wide>
           <p className="eyebrow">Book inspection</p>
           <h1 className="page-title">Book a viewing in a calm, guided flow.</h1>
-          <p className="lede">The form stays honest about its current front-end-only submission state.</p>
+          <p className="lede">The form keeps the process clear, concise, and easy to complete on mobile.</p>
         </Container>
       </section>
       <section className="section-tight">
@@ -1059,7 +1059,7 @@ function BookInspectionPage() {
 
               {submitted ? (
                 <div className="alert">
-                  Inspection request saved locally. Connect a backend to deliver the request in production.
+                  Inspection request saved locally for this release.
                 </div>
               ) : null}
 
@@ -1119,7 +1119,7 @@ function BookInspectionPage() {
                     </p>
                   </div>
                   <div className="notice">
-                    After submission, users should see exactly what happens next. This release confirms locally only.
+                    After submission, users should see exactly what happens next in plain language.
                   </div>
                 </div>
               ) : null}
@@ -1151,7 +1151,7 @@ function BookInspectionPage() {
                 ) : (
                   <p className="muted">Choose a listing to see supporting context here.</p>
                 )}
-                <div className="notice">The flow does not pretend to submit to a backend until one exists.</div>
+                <div className="notice">The flow explains the next step clearly until a live backend exists.</div>
               </div>
             </aside>
           </div>
@@ -1173,7 +1173,7 @@ function SellPage() {
         <Container wide>
           <p className="eyebrow">Sell</p>
           <h1 className="page-title">Sell a property without friction.</h1>
-          <p className="lede">The seller flow stays simple, progressive, and honest about front-end-only submission.</p>
+          <p className="lede">The seller flow stays simple, progressive, and easy to complete on mobile.</p>
         </Container>
       </section>
       <section className="section-tight">
@@ -1198,7 +1198,7 @@ function SellPage() {
                 ))}
               </div>
 
-              {submitted ? <div className="alert">Seller submission saved locally. Backend handoff can be added later.</div> : null}
+              {submitted ? <div className="alert">Seller enquiry saved locally for this release.</div> : null}
 
               {step === 0 ? (
                 <div className="stack">
@@ -1371,19 +1371,19 @@ function ComparePage() {
 
 function PrivacyPage() {
   return (
-    <Page title={`Privacy | ${brand.name}`} description="Privacy policy placeholder for the front-end release." canonicalPath="/privacy">
+    <Page title={`Privacy | ${brand.name}`} description="Privacy policy placeholder for the website." canonicalPath="/privacy">
       <section className="page-hero">
         <Container wide>
           <p className="eyebrow">Privacy</p>
           <h1 className="page-title">Privacy policy.</h1>
-          <p className="lede">This placeholder explains that the release is front-end only and can be replaced with a formal policy later.</p>
+          <p className="lede">This placeholder can be replaced with a formal policy before launch.</p>
         </Container>
       </section>
       <section className="section-tight">
         <Container wide>
           <div className="panel stack">
-            <p>We collect only the information users choose to enter into the visible forms on this sample release.</p>
-            <p>Forms do not submit to a live backend yet, and the browser may store favourites, compare items, and recently viewed properties locally.</p>
+            <p>We collect only the information users choose to enter into the visible forms on this website.</p>
+            <p>The browser may store favourites, compare items, and recently viewed properties locally for convenience.</p>
             <p>Replace this placeholder with a formal privacy policy before production use.</p>
           </div>
         </Container>
@@ -1394,7 +1394,7 @@ function PrivacyPage() {
 
 function TermsPage() {
   return (
-    <Page title={`Terms | ${brand.name}`} description="Terms placeholder for the front-end release." canonicalPath="/terms">
+    <Page title={`Terms | ${brand.name}`} description="Terms placeholder for the website." canonicalPath="/terms">
       <section className="page-hero">
         <Container wide>
           <p className="eyebrow">Terms</p>
@@ -1405,7 +1405,7 @@ function TermsPage() {
       <section className="section-tight">
         <Container wide>
           <div className="panel stack">
-            <p>Sample listings are for interface demonstration and should be replaced with live inventory before public launch.</p>
+            <p>Listings shown on this website are illustrative until live inventory is connected.</p>
             <p>Any future submission or booking system should include clear confirmation, privacy, and consent language.</p>
             <p>Users should not treat this front-end build as a legal contract or a live brokerage system.</p>
           </div>
@@ -1440,10 +1440,10 @@ export function AppRoutes() {
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/buy" element={<PropertyDirectoryPage purpose="buy" title="Buy" description="Browse sample homes for purchase with clear filters and low-friction contact paths." />} />
-        <Route path="/rent" element={<PropertyDirectoryPage purpose="rent" title="Rent" description="Browse sample rental homes and serviced apartments with practical discovery filters." />} />
+        <Route path="/buy" element={<PropertyDirectoryPage purpose="buy" title="Buy" description="Browse homes for purchase with clear filters and low-friction contact paths." />} />
+        <Route path="/rent" element={<PropertyDirectoryPage purpose="rent" title="Rent" description="Browse rental homes and serviced apartments with practical discovery filters." />} />
         <Route path="/sell" element={<SellPage />} />
-        <Route path="/properties" element={<PropertyDirectoryPage title="Properties" description="Search the complete sample catalogue with filters for location, type, price, and trust signals." />} />
+        <Route path="/properties" element={<PropertyDirectoryPage title="Properties" description="Search the complete catalogue with filters for location, type, price, and trust signals." />} />
         <Route path="/properties/:slug" element={<PropertyDetailPage />} />
         <Route path="/locations" element={<LocationsPage />} />
         <Route path="/locations/:slug" element={<LocationDetailPage />} />
