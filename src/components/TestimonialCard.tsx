@@ -31,11 +31,10 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
           <div className="fine-print">{testimonial.location}</div>
         </div>
       </div>
-      <p className="testimonial-card__quote">“{testimonial.quote}”</p>
+      <p className="testimonial-card__quote">"{testimonial.quote}"</p>
       <div className="chips">
         <span className="pill success">{testimonial.rating.toFixed(1)} / 5.0</span>
       </div>
     </motion.article>
   );
 }
-

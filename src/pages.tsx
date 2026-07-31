@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { Link, Navigate, Route, Routes, useParams, useSearchParams } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import { brand, categories, faqs, locations, properties, services, stats, storySlides, testimonials, agents } from './data/siteData';
+import { familyAssets } from './data/assets';
 import type { SearchFilters, Property, PropertyPurpose } from './types';
 import { Button, ButtonLink } from './components/Button';
 import { Badge } from './components/Badge';
@@ -125,7 +126,7 @@ function HomePage() {
               transition={{ duration: reduceMotion ? 0 : 0.35, delay: 0.08 }}
             >
               <div className="hero-image">
-                <img src="/images/hero-duplex.jfif" alt="Modern duplex with a landscaped front approach and private carport" />
+                <img src="/images/hero-duplex.jpg" alt="Modern duplex with a landscaped front approach and private carport" />
               </div>
               <div className="hero-panel">
                 <div className="callout">
@@ -308,7 +309,7 @@ function HomePage() {
         eyebrow="Customer care and family stories"
         title="A scrolling story section with stronger contrast."
         description="Families, remote buyers, and location context now sit on image-led cards with a sticky scroll background, softer blur, and clearer text."
-        backgroundImage="/raw-assets/We%20decided%20to%20rev%20up%20some%20fun%20with%20%40LEGO%20bricks!%20%23ad%20Creating%20a%20racetrack%20and%20cars%20from%20our%20imagination%20to%20race!!%20One%20thing%20about%20us,%20even%20play%20turns%20into%20learning%20and%20time%20well%20spent!%20As%20siblings%20and%20family,%20we%20want.jfif"
+        backgroundImage={familyAssets.storyBackground}
         slides={storySlides}
       />
 

@@ -39,6 +39,7 @@
   --transition-fast: 160ms cubic-bezier(0.22, 1, 0.36, 1);
   --transition-normal: 240ms cubic-bezier(0.22, 1, 0.36, 1);
   --transition-slow: 360ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-button: 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 *,
@@ -212,7 +213,13 @@ a:hover {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 700;
-  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    transform var(--transition-button),
+    background-color var(--transition-button),
+    border-color var(--transition-button),
+    color var(--transition-button),
+    box-shadow var(--transition-button),
+    opacity var(--transition-button);
   cursor: pointer;
 }
 
@@ -357,8 +364,8 @@ a:hover {
 .hero-grid {
   display: grid;
   gap: clamp(1.5rem, 4vw, 3rem);
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  align-items: center;
+  grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.75fr);
+  align-items: start;
 }
 
 .hero-copy {
@@ -374,6 +381,7 @@ a:hover {
 }
 
 .hero-card {
+  justify-self: end;
   overflow: hidden;
   border-radius: 2rem;
   background: linear-gradient(180deg, rgba(18, 19, 26, 0.98), rgba(12, 13, 20, 0.98));
@@ -383,7 +391,7 @@ a:hover {
 
 .hero-image {
   position: relative;
-  min-height: 540px;
+  min-height: 440px;
 }
 
 .hero-image img {
@@ -723,6 +731,16 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+
+.field select {
+  background-color: rgba(17, 18, 27, 0.96);
+  color-scheme: dark;
+}
+
+.field select option {
+  background-color: #11131b;
   color: var(--text);
 }
 
@@ -1181,8 +1199,8 @@ a:hover {
 .story-layout {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  align-items: start;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: stretch;
 }
 
 .story-sticky {
@@ -1192,7 +1210,7 @@ a:hover {
 .story-sticky__frame {
   position: sticky;
   top: 6rem;
-  min-height: 78vh;
+  min-height: 74vh;
   overflow: hidden;
   border-radius: 2rem;
   border: 1px solid rgba(255, 79, 163, 0.18);
@@ -1206,7 +1224,7 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(2px) brightness(0.6) saturate(0.88) contrast(1.06);
+  filter: blur(1.2px) brightness(0.76) saturate(0.95) contrast(1.03);
   transform: scale(1.08);
 }
 
@@ -1214,8 +1232,8 @@ a:hover {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top, rgba(255, 79, 163, 0.18), transparent 42%),
-    linear-gradient(180deg, rgba(4, 4, 8, 0.18) 0%, rgba(4, 4, 8, 0.8) 100%);
+    radial-gradient(circle at top, rgba(255, 79, 163, 0.24), transparent 40%),
+    linear-gradient(180deg, rgba(4, 4, 8, 0.1) 0%, rgba(4, 4, 8, 0.7) 100%);
 }
 
 .story-sticky__content {
@@ -1407,9 +1425,11 @@ a:hover {
   bottom: 1rem;
   z-index: 70;
   display: grid;
-  gap: 0.2rem;
-  padding: 0.82rem 0.96rem;
-  border-radius: 1.1rem;
+  place-items: center;
+  width: 3.85rem;
+  height: 3.85rem;
+  padding: 0;
+  border-radius: 999px;
   background: linear-gradient(135deg, #ff4fa3, #ff86c0);
   color: #12040c;
   text-decoration: none;
@@ -1424,11 +1444,20 @@ a:hover {
   filter: brightness(1.02);
 }
 
-.whatsapp-fab__label {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.whatsapp-fab__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.whatsapp-fab__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.whatsapp-fab__icon path {
+  fill: currentColor;
 }
 
 @keyframes storyMarquee {
@@ -1473,8 +1502,8 @@ a:hover {
   }
 
   .nav,
-  .header .button-secondary,
-  .header .button-ghost {
+  .header .button-secondary:not(.mobile-toggle),
+  .header .button-ghost:not(.mobile-toggle) {
     display: none;
   }
 
@@ -1531,8 +1560,8 @@ a:hover {
   .whatsapp-fab {
     right: 0.75rem;
     bottom: 0.75rem;
-    left: 0.75rem;
-    width: auto;
+    width: 3.6rem;
+    height: 3.6rem;
   }
 }
 

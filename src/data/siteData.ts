@@ -162,7 +162,7 @@ export const properties: Property[] = [
       address: 'Prime residential street, Ikoyi, Lagos',
     },
     images: [
-      { src: '/images/hero-duplex.jfif', alt: 'Modern duplex exterior with clean lines and front lawn', aspect: 'landscape' },
+      { src: '/images/hero-duplex.jpg', alt: 'Modern duplex exterior with clean lines and front lawn', aspect: 'landscape' },
       { src: '/images/modern-villa.webp', alt: 'Luxury villa with bold geometry and bright facade', aspect: 'landscape' },
       { src: '/images/terrace-home.webp', alt: 'Residential home with balanced frontage and landscaped approach', aspect: 'portrait' },
     ],
@@ -308,7 +308,7 @@ export const properties: Property[] = [
     },
     images: [
       { src: '/images/lagos-skyline.webp', alt: 'Lagos city skyline with premium towers and a broad avenue', aspect: 'portrait' },
-      { src: '/images/havana-villa.jfif', alt: 'Warmly lit residential home with courtyard planting and evening sky', aspect: 'landscape' },
+      { src: '/images/havana-villa.jpg', alt: 'Warmly lit residential home with courtyard planting and evening sky', aspect: 'landscape' },
       { src: '/images/courtyard-home.webp', alt: 'Elegant courtyard home with balanced outdoor seating and soft greenery', aspect: 'landscape' },
     ],
     agentId: 'adaeze-okafor',
@@ -356,7 +356,7 @@ export const properties: Property[] = [
       address: 'Residential avenue, New Haven, Enugu',
     },
     images: [
-      { src: '/images/enugu-city.jfif', alt: 'Aerial view of Enugu city streets and surrounding residential areas', aspect: 'portrait' },
+      { src: '/images/enugu-city.jpg', alt: 'Aerial view of Enugu city streets and surrounding residential areas', aspect: 'portrait' },
       { src: '/images/modern-estate.webp', alt: 'Modern residence within a neat suburban setting', aspect: 'landscape' },
       { src: '/images/terrace-home.webp', alt: 'Residential home with quiet frontage and landscaped surroundings', aspect: 'landscape' },
     ],
@@ -453,8 +453,8 @@ export const testimonials: Testimonial[] = [
     quote:
       'The seller journey explained the process before asking for my details, which made the whole experience feel respectful and calm.',
     rating: 5,
-    image: undefined,
-    label: 'Sample testimonial without portrait',
+    image: familyAssets.villa,
+    label: 'Portrait testimonial image',
   },
 ];
 
@@ -464,7 +464,7 @@ export const storySlides: StorySlide[] = [
     title: 'A family search that felt calm',
     description: 'Lagos buyers used the shortlist, inspected once, and moved forward without pressure.',
     state: 'Lagos',
-    image: familyAssets.lounge,
+    image: familyAssets.duplex,
     label: 'Family testimonial background',
   },
   {
@@ -472,23 +472,23 @@ export const storySlides: StorySlide[] = [
     title: 'Remote viewing from Toronto',
     description: 'A diaspora client could compare the home, agent, and neighbourhood with clarity.',
     state: 'Diaspora',
-    image: familyAssets.selfie,
+    image: familyAssets.premiumVilla,
     label: 'Remote buyer background',
   },
   {
     id: 'story-abuja',
     title: 'Premium living in Abuja',
-    description: 'A villa story card that carries the black-and-pink treatment with stronger contrast.',
+    description: 'A skyline story card that keeps the premium treatment while matching the city-first storyline.',
     state: 'Abuja',
-    image: '/images/modern-luxury.jpg',
+    image: familyAssets.skyline,
     label: 'Luxury villa background',
   },
   {
     id: 'story-enugu',
     title: 'Neighbourhood context first',
-    description: 'Enugu and Port Harcourt cards show where the home sits before the user decides.',
+    description: 'A luxury home card that keeps the neighbourhood context visible before the decision.',
     state: 'Enugu',
-    image: '/images/enugu-city.jfif',
+    image: familyAssets.luxuryVilla,
     label: 'City context background',
   },
 ];
@@ -575,7 +575,7 @@ export const locations: LocationProfile[] = [
     propertyTypes: ['Family houses', 'Compact apartments', 'Duplexes', 'Student-friendly rentals'],
     marketNote:
       'Sample market note: family-friendly homes and practical rental stock dominate this story page.',
-    image: '/images/enugu-city.jfif',
+    image: '/images/enugu-city.jpg',
     featuredPropertySlugs: ['enugu-new-heaven-family-house'],
   },
   {

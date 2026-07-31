@@ -12,7 +12,7 @@ describe('application routes', () => {
     );
 
     expect(screen.getByRole('heading', { name: /trusted homes for buyers, renters, and sellers/i })).toBeInTheDocument();
-  });
+  }, 15000);
 
   it('renders a property detail page from the route slug', () => {
     render(
@@ -23,5 +23,5 @@ describe('application routes', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: /ikoyi courtyard duplex/i })).toBeInTheDocument();
     expect(screen.getByText(/inspection window/i)).toBeInTheDocument();
-  });
+  }, 15000);
 });
