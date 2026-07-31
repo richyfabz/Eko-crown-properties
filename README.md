@@ -100,7 +100,7 @@ Important deployment details:
 
 - build command: `npm run build`
 - output directory: `dist`
-- SPA fallback: all routes rewrite to `index.html`
+- SPA fallback: non-file routes rewrite to `index.html` while static assets keep their real paths
 
 The included `vercel.json` supports client-side routing so deep links such as `/properties/ikoyi-courtyard-duplex` continue to work after deployment.
 
