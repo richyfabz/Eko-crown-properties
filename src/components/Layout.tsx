@@ -100,7 +100,7 @@ export function Layout({ children }: { children: ReactNode }) {
             </div>
           </div>
           <div className="footer-bottom">
-            <span>© 2026 {brand.name}. Sample content for release-ready front-end build.</span>
+            <span>Copyright 2026 {brand.name}. Sample content for release-ready front-end build.</span>
             <span>Built with React, TypeScript, Vite, and Framer Motion.</span>
           </div>
         </Container>
@@ -110,11 +110,22 @@ export function Layout({ children }: { children: ReactNode }) {
         className="whatsapp-fab"
         href={`https://wa.me/${brand.whatsapp.replace(/\D/g, '')}`}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         aria-label="Chat with customer care on WhatsApp"
       >
-        <span className="whatsapp-fab__label">WhatsApp</span>
-        <strong>Chat with customer care</strong>
+        <span className="whatsapp-fab__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="presentation" focusable="false">
+            <path
+              d="M19.96 17.57c-.28-.14-1.64-.81-1.9-.91-.26-.1-.45-.14-.64.14-.19.28-.74.91-.91 1.1-.17.19-.33.21-.61.07-.28-.14-1.19-.44-2.27-1.41-.84-.75-1.41-1.67-1.58-1.95-.17-.28-.02-.44.12-.58.12-.12.28-.33.42-.49.14-.17.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.55-.88-2.12-.23-.56-.47-.49-.64-.49h-.55c-.19 0-.49.07-.75.35-.26.28-1 1-1 2.46s1.03 2.86 1.17 3.06c.14.19 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.64-.67 1.87-1.31.23-.64.23-1.19.16-1.31-.07-.12-.26-.19-.54-.33Z"
+              fill="currentColor"
+            />
+            <path
+              d="M16 3C8.82 3 3 8.58 3 15.45c0 2.4.72 4.78 2.08 6.83L4 29l6.95-1.83a13.3 13.3 0 0 0 5.05.98C23.18 28.15 29 22.58 29 15.7 29 8.83 23.18 3 16 3Zm0 22.72c-1.68 0-3.33-.4-4.78-1.16l-.34-.18-4.12 1.08 1.1-3.97-.22-.36A10.83 10.83 0 0 1 5.9 15.45C5.9 10.18 10.43 5.9 16 5.9s10.1 4.28 10.1 9.55c0 5.28-4.53 10.27-10.1 10.27Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <span className="sr-only">WhatsApp</span>
       </a>
 
       <Drawer open={mobileMenuOpen} title="Navigation" onClose={() => setMobileMenuOpen(false)}>
@@ -134,4 +145,3 @@ export function Layout({ children }: { children: ReactNode }) {
     </div>
   );
 }
-
