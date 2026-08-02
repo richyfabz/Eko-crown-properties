@@ -15,6 +15,11 @@ class MockIntersectionObserver {
 }
 
 vi.stubGlobal('IntersectionObserver', MockIntersectionObserver);
+vi.stubGlobal('scrollTo', vi.fn());
+Object.defineProperty(window, 'scrollTo', {
+  value: vi.fn(),
+  writable: true,
+});
 
 const motionProps = new Set([
   'animate',

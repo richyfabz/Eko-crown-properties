@@ -125,8 +125,12 @@ function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: reduceMotion ? 0 : 0.35, delay: 0.08 }}
             >
-              <div className="hero-image">
-                <img src="/images/hero-duplex.jpg" alt="Modern duplex with a landscaped front approach and private carport" />
+              <div className="hero-image hero-image--fixed" style={{ backgroundImage: `url(${familyAssets.heroScroll})` }}>
+                <div className="hero-image__badge">New image upload</div>
+                <div className="hero-image__caption">
+                  <strong>Anchored visual story</strong>
+                  <span>The backdrop stays fixed while the page scrolls for a richer home-page reveal.</span>
+                </div>
               </div>
               <div className="hero-panel">
                 <div className="callout">
@@ -279,10 +283,11 @@ function HomePage() {
                 <li>Save, compare, book an inspection, or contact the agent.</li>
                 <li>Receive a calm follow-up path instead of a dead end.</li>
               </ol>
-              <div className="map-placeholder">
-                <div>
-                  <strong>Roadmap-ready product flow</strong>
-                  <p className="fine-print">Prepared for backend, CRM, map, and analytics integration later.</p>
+              <div className="map-frame">
+                <img src={familyAssets.map} alt="Stylized map illustration used for the location section" loading="lazy" />
+                <div className="map-frame__overlay">
+                  <strong>Map context</strong>
+                  <p className="fine-print">The live map placeholder has been replaced with the uploaded map image.</p>
                 </div>
               </div>
             </div>

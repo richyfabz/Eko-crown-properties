@@ -7,4 +7,6 @@ export const familyAssets = {
   duplex: new URL('../../img/Duplex house.jpg', import.meta.url).href,
   luxuryVilla: new URL('../../img/download (5).webp', import.meta.url).href,
   storyBackground: new URL('../../img/Chinna Wallpaper.webp', import.meta.url).href,
+  heroScroll: new URL('../../img/Chinna Wallpaper.webp', import.meta.url).href,
+  map: new URL('../../img/map.jpg', import.meta.url).href,
 };
