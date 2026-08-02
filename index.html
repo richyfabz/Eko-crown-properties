@@ -9,6 +9,28 @@
       content="Premium Nigerian real estate listings, trusted agents, property search, inspections, and seller support."
     />
     <title>Nigerian Premium Real Estate</title>
+    <script>
+      (function () {
+        try {
+          if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+          }
+        } catch (error) {
+          void error;
+        }
+
+        function resetScroll() {
+          try {
+            window.scrollTo(0, 0);
+          } catch (error) {
+            void error;
+          }
+        }
+
+        window.addEventListener('DOMContentLoaded', resetScroll, { once: true });
+        window.addEventListener('pageshow', resetScroll);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

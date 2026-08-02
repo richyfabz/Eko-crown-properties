@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState, type ReactNode } from 'react';
+import { useLayoutEffect, useState, type ReactNode } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { brand, navigation, secondaryNavigation } from '../data/siteData';
@@ -17,7 +17,7 @@ export function Layout({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setMobileMenuOpen(false);
     try {
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
