@@ -125,12 +125,8 @@ function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: reduceMotion ? 0 : 0.35, delay: 0.08 }}
             >
-              <div className="hero-image hero-image--fixed" style={{ backgroundImage: `url(${familyAssets.heroScroll})` }}>
-                <div className="hero-image__badge">New image upload</div>
-                <div className="hero-image__caption">
-                  <strong>Anchored visual story</strong>
-                  <span>The backdrop stays fixed while the page scrolls for a richer home-page reveal.</span>
-                </div>
+              <div className="hero-image">
+                <img src="/images/hero-duplex.jpg" alt="Modern duplex with a landscaped front approach and private carport" />
               </div>
               <div className="hero-panel">
                 <div className="callout">
@@ -285,10 +281,6 @@ function HomePage() {
               </ol>
               <div className="map-frame">
                 <img src={familyAssets.map} alt="Stylized map illustration used for the location section" loading="lazy" />
-                <div className="map-frame__overlay">
-                  <strong>Map context</strong>
-                  <p className="fine-print">The live map placeholder has been replaced with the uploaded map image.</p>
-                </div>
               </div>
             </div>
           </div>
