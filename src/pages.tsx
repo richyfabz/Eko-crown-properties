@@ -3,6 +3,7 @@ import { Link, Navigate, Route, Routes, useParams, useSearchParams } from 'react
 import { motion, useReducedMotion } from 'framer-motion';
 import { brand, categories, faqs, locations, properties, services, stats, storySlides, testimonials, agents } from './data/siteData';
 import { familyAssets } from './data/assets';
+import { siteImages } from './data/siteImages';
 import type { SearchFilters, Property, PropertyPurpose } from './types';
 import { Button, ButtonLink } from './components/Button';
 import { Badge } from './components/Badge';
@@ -86,7 +87,7 @@ function HomePage() {
       title={`${brand.name} | Premium Nigerian Real Estate`}
       description="Search premium Nigerian homes, explore trusted locations, book inspections, and speak with a professional agent."
       canonicalPath="/"
-      image="/images/modern-villa.webp"
+      image={siteImages.modernVilla}
     >
       <section className="hero">
         <Container wide>
@@ -126,7 +127,7 @@ function HomePage() {
               transition={{ duration: reduceMotion ? 0 : 0.35, delay: 0.08 }}
             >
               <div className="hero-image">
-                <img src="/images/hero-duplex.jpg" alt="Modern duplex with a landscaped front approach and private carport" />
+                <img src={siteImages.heroDuplex} alt="Modern duplex with a landscaped front approach and private carport" />
               </div>
               <div className="hero-panel">
                 <div className="callout">

@@ -11,6 +11,7 @@ import type {
   Testimonial,
 } from '../types';
 import { familyAssets } from './assets';
+import { siteImages } from './siteImages';
 
 export const brand = {
   name: 'Eko Crown Properties',
@@ -162,9 +163,9 @@ export const properties: Property[] = [
       address: 'Prime residential street, Ikoyi, Lagos',
     },
     images: [
-      { src: '/images/hero-duplex.jpg', alt: 'Modern duplex exterior with clean lines and front lawn', aspect: 'landscape' },
-      { src: '/images/modern-villa.webp', alt: 'Luxury villa with bold geometry and bright facade', aspect: 'landscape' },
-      { src: '/images/terrace-home.webp', alt: 'Residential home with balanced frontage and landscaped approach', aspect: 'portrait' },
+      { src: siteImages.heroDuplex, alt: 'Modern duplex exterior with clean lines and front lawn', aspect: 'landscape' },
+      { src: siteImages.modernVilla, alt: 'Luxury villa with bold geometry and bright facade', aspect: 'landscape' },
+      { src: siteImages.terraceHome, alt: 'Residential home with balanced frontage and landscaped approach', aspect: 'portrait' },
     ],
     agentId: 'adaeze-okafor',
     amenities: ['24-hour security', 'Dedicated parking', 'Private balcony', 'Landscaped courtyard', 'Generator-ready power'],
@@ -211,9 +212,9 @@ export const properties: Property[] = [
       address: 'Quiet terrace street, Lekki Phase 1, Lagos',
     },
     images: [
-      { src: '/images/garden-house.webp', alt: 'Warm terrace home with landscaped driveway and neat frontage', aspect: 'landscape' },
-      { src: '/images/courtyard-home.webp', alt: 'Courtyard-style home with strong landscaping and mature greenery', aspect: 'landscape' },
-      { src: '/images/modern-estate.webp', alt: 'Modern estate home with refined lines and evening lighting', aspect: 'portrait' },
+      { src: siteImages.gardenHouse, alt: 'Warm terrace home with landscaped driveway and neat frontage', aspect: 'landscape' },
+      { src: siteImages.courtyardHome, alt: 'Courtyard-style home with strong landscaping and mature greenery', aspect: 'landscape' },
+      { src: siteImages.modernEstate, alt: 'Modern estate home with refined lines and evening lighting', aspect: 'portrait' },
     ],
     agentId: 'tunde-balogun',
     amenities: ['Gated estate', 'Visitors parking', 'Balcony', 'Paved roads', 'Fiber internet ready'],
@@ -260,9 +261,9 @@ export const properties: Property[] = [
       address: 'Tree-lined avenue, Maitama, Abuja',
     },
     images: [
-      { src: '/images/pool-villa.webp', alt: 'Luxury villa with pool terrace and modern white exterior', aspect: 'landscape' },
-      { src: '/images/glass-mansion.webp', alt: 'Glass-front mansion with generous deck and mountain backdrop', aspect: 'landscape' },
-      { src: '/images/modern-luxury.jpg', alt: 'Contemporary luxury home with reflective frontage and evening light', aspect: 'portrait' },
+      { src: siteImages.poolVilla, alt: 'Luxury villa with pool terrace and modern white exterior', aspect: 'landscape' },
+      { src: siteImages.glassMansion, alt: 'Glass-front mansion with generous deck and mountain backdrop', aspect: 'landscape' },
+      { src: siteImages.modernLuxury, alt: 'Contemporary luxury home with reflective frontage and evening light', aspect: 'portrait' },
     ],
     agentId: 'zainab-musa',
     amenities: ['Swimming pool', 'Outdoor lounge', 'Smart access gate', 'Dedicated staff wing', 'Solar backup'],
@@ -307,9 +308,9 @@ export const properties: Property[] = [
       address: 'Managed tower, Victoria Island, Lagos',
     },
     images: [
-      { src: '/images/lagos-skyline.webp', alt: 'Lagos city skyline with premium towers and a broad avenue', aspect: 'portrait' },
-      { src: '/images/havana-villa.jpg', alt: 'Warmly lit residential home with courtyard planting and evening sky', aspect: 'landscape' },
-      { src: '/images/courtyard-home.webp', alt: 'Elegant courtyard home with balanced outdoor seating and soft greenery', aspect: 'landscape' },
+      { src: siteImages.lagosSkyline, alt: 'Lagos city skyline with premium towers and a broad avenue', aspect: 'portrait' },
+      { src: siteImages.havanaVilla, alt: 'Warmly lit residential home with courtyard planting and evening sky', aspect: 'landscape' },
+      { src: siteImages.courtyardHome, alt: 'Elegant courtyard home with balanced outdoor seating and soft greenery', aspect: 'landscape' },
     ],
     agentId: 'adaeze-okafor',
     amenities: ['24-hour concierge', 'Power backup', 'Elevator access', 'Secure parking', 'Cleaning service option'],
@@ -356,9 +357,9 @@ export const properties: Property[] = [
       address: 'Residential avenue, New Haven, Enugu',
     },
     images: [
-      { src: '/images/enugu-city.jpg', alt: 'Aerial view of Enugu city streets and surrounding residential areas', aspect: 'portrait' },
-      { src: '/images/modern-estate.webp', alt: 'Modern residence within a neat suburban setting', aspect: 'landscape' },
-      { src: '/images/terrace-home.webp', alt: 'Residential home with quiet frontage and landscaped surroundings', aspect: 'landscape' },
+      { src: siteImages.enuguCity, alt: 'Aerial view of Enugu city streets and surrounding residential areas', aspect: 'portrait' },
+      { src: siteImages.modernEstate, alt: 'Modern residence within a neat suburban setting', aspect: 'landscape' },
+      { src: siteImages.terraceHome, alt: 'Residential home with quiet frontage and landscaped surroundings', aspect: 'landscape' },
     ],
     agentId: 'tunde-balogun',
     amenities: ['Private compound', 'Water storage', 'Quiet road', 'Family-sized rooms', 'Easy commuter access'],
@@ -403,9 +404,9 @@ export const properties: Property[] = [
       address: 'Waterfront tower, Port Harcourt',
     },
     images: [
-      { src: '/images/modern-villa.webp', alt: 'Luxurious contemporary villa with crisp facade and sharp geometry', aspect: 'landscape' },
-      { src: '/images/glass-mansion.webp', alt: 'Glass mansion with pool deck and wide lawn', aspect: 'landscape' },
-      { src: '/images/modern-luxury.jpg', alt: 'Modern luxury home with glossy exterior and evening reflections', aspect: 'portrait' },
+      { src: siteImages.modernVilla, alt: 'Luxurious contemporary villa with crisp facade and sharp geometry', aspect: 'landscape' },
+      { src: siteImages.glassMansion, alt: 'Glass mansion with pool deck and wide lawn', aspect: 'landscape' },
+      { src: siteImages.modernLuxury, alt: 'Modern luxury home with glossy exterior and evening reflections', aspect: 'portrait' },
     ],
     agentId: 'zainab-musa',
     amenities: ['Roof terrace', 'Private lift access', 'Waterfront views', '24-hour security', 'Backup power'],
@@ -537,7 +538,7 @@ export const locations: LocationProfile[] = [
     propertyTypes: ['Apartments', 'Terraces', 'Duplexes', 'Penthouses'],
     marketNote:
       'Sample market note: premium pricing is strongest in well-serviced neighbourhoods; replace with sourced figures before launch.',
-    image: '/images/lagos-skyline.webp',
+    image: siteImages.lagosSkyline,
     featuredPropertySlugs: ['ikoyi-courtyard-duplex', 'victoria-island-serviced-apartment'],
   },
   {
@@ -556,7 +557,7 @@ export const locations: LocationProfile[] = [
     propertyTypes: ['Villas', 'Detached homes', 'Serviced apartments', 'Luxury rentals'],
     marketNote:
       'Sample market note: supply is tighter in the most premium districts; confirm pricing with live local data later.',
-    image: '/images/modern-luxury.jpg',
+    image: siteImages.modernLuxury,
     featuredPropertySlugs: ['abuja-maitama-pool-villa'],
   },
   {
@@ -575,7 +576,7 @@ export const locations: LocationProfile[] = [
     propertyTypes: ['Family houses', 'Compact apartments', 'Duplexes', 'Student-friendly rentals'],
     marketNote:
       'Sample market note: family-friendly homes and practical rental stock dominate this story page.',
-    image: '/images/enugu-city.jpg',
+    image: siteImages.enuguCity,
     featuredPropertySlugs: ['enugu-new-heaven-family-house'],
   },
   {
@@ -594,7 +595,7 @@ export const locations: LocationProfile[] = [
     propertyTypes: ['Penthouses', 'Detached homes', 'Apartments', 'Mixed-use residences'],
     marketNote:
       'Sample market note: waterfront and premium city homes are the highlight of this location page.',
-    image: '/images/glass-mansion.webp',
+    image: siteImages.glassMansion,
     featuredPropertySlugs: ['port-harcourt-riverside-penthouse'],
   },
 ];

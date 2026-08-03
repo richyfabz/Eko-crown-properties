@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { siteImages } from '../data/siteImages';
 
 interface SeoProps {
   title: string;
@@ -37,7 +38,7 @@ function setCanonical(path: string) {
   link.href = `${window.location.origin}${path}`;
 }
 
-export function Seo({ title, description, canonicalPath, image = '/images/modern-villa.webp' }: SeoProps) {
+export function Seo({ title, description, canonicalPath, image = siteImages.modernVilla }: SeoProps) {
   useEffect(() => {
     document.title = title;
     setMeta('description', description);
@@ -56,4 +57,3 @@ export function Seo({ title, description, canonicalPath, image = '/images/modern
 
   return null;
 }
-

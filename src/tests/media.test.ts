@@ -12,5 +12,6 @@ describe('site media', () => {
     expect(storySources).toHaveLength(4);
     expect(new Set(sources).size).toBe(sources.length);
     expect(sources.every((source) => !source.includes('/raw-assets/'))).toBe(true);
+    expect(sources.every((source) => !source.includes('/images/'))).toBe(true);
   });
 });
